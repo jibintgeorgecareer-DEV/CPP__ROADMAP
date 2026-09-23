@@ -1,0 +1,76 @@
+1. What is c++ , History , Structure                     (MODULE 1)
+2. Compiler VS interpreter (.cpp -> machine code VS .py -> byte code -> PVM -> machine code)
+3. Data Types, auto
+4. Variables, scope & lifetime
+5. const & constexpr
+
+OPERATORS & CONTROLS-----------------------               (MODULE 2)
+6. Operators                                              
+7. Control Statements
+
+ARRAYS & STRINGS---------------------------               (MODULE 3)
+8. Arrays 1D & 2D                                         
+9. Strings , functions
+
+FUNCTIONS----------------------------------               (MODULE 4)
+10. Functions, call by - value , reference , pointer      
+11. Inline functions
+12. Function Overloading 
+13. Recursion , recursive function
+
+MEMMORY------------------------------------               (MODULE 5)
+14.  References 
+15.  Pointers    
+16.  Dynamic memory - new & delete  
+17.  Dangling pointers         
+18.  Smart Pointers              
+18.5 Stack and Heap  
+    
+OOP---------------------------------------                 (MODULE 6)
+19. Class , objects 
+20. constructors & destructors (Types)     
+21. this pointer
+22. static - var ,fun,members        
+23. Inheritence & Polimorphism
+24. Operator Overloading, Function Overriding
+25. Virtual Function & Pure Virtual Functions
+26. Friend Function        
+27. access specifiers    
+28. Dynamic Bynding
+28.5 Copy Objects - shallow copy & Deep copy     
+
+ADVANCED CONCEPTS-------------------------------           (MODULE 7)
+29. Preprocessors- #define, #ifdef, #endif
+30. enum
+31. Namespaces and std::function (utilities)    
+32. Exception Handling          (DONE)
+33. File Handling
+34. Templates
+35. STL library - containers, iterators, algorithms, lambdas
+36. Thread
+
+
+MODERN C++ --------------------------------------
+These topics are used in modern codebases.       
+
+auto
+range-based for
+nullptr
+enum class
+constexpr
+move semantics
+rvalue references
+std::move
+std::forward
+initializer_list
+structured bindings
+optional
+variant
+any
+string_view
+filesystem
+chrono
+thread
+mutex
+future
+async

@@ -1,0 +1,22 @@
+// Poly = many & Morph = Forms, which means one thing can be many forms
+// Think about a person Anil, He can be father at home, employee at office, student at college.
+// C++ has two types : Compile-time polymorphism  & Run-time polymorphism
+
+//      Polymorphism
+//           │
+//           ├── Compile-Time Polymorphism
+//           └── Run-Time Polymorphism
+
+// Compile-time polymorphism : compiler desides which function to call before program runs.
+// EXAMPLES: Function Overloading (MODULE 4) & Operator Overloading
+
+// Run-time polymorphism : Decision made while running the program.
+// Used in: Virtual Functions, Pure virtual functios, Function OVERRIDING
+
+//                              Polymorphism 
+//                                    |
+// compile-time       _______________________________________        run-tim
+//                   |                                       |
+//        Function Overloading                       Virtual Function
+//        Operator Overloading                       Pure Virtual Functions
+//                                                   Function Overriding

@@ -1,0 +1,78 @@
+STL = Standard Template Library     
+It is a collection of ready-made, re-usable C++ components that help programmers to
+store, process, manage data.
+There are 4 parts,..
+
+STL
+├── Containers       → Store data
+├── Algorithms       → Process data
+├── Iterators        → Move through data
+└── Function Objects → Define operations
+
+
+=============== 1. Containers ==========================
+
+Containers are store & organize data.
+
+* vector -> Dynamic Array
+* array  -> fixed-size array
+* list   -> doubly linked list
+* stack  -> LIFO 
+* queue  -> FIFO
+* set    -> stores unique sorted values
+* map    -> stores key-value pairs
+* unordered_map -> key-value pairs with hash-based lookup
+
+* unordered_set
+* priority_queue
+* deque
+* multiset
+* multimap
+
+
+=============== 1. Iterators ==========================
+
+Iterators are used to traverse/access elements inside containers.
+
+vector<int> numbers = {10, 20, 30};
+for(auto it = numbers.begin(); it != numbers.end(); it++)
+{
+    cout << *it << endl;
+}
+
+The variable 'it' is an iterator.
+
+
+=============== 1. Algorithms ==========================
+
+Ready - made Algorithms for common operations
+
+* sort()
+* find()
+* reverse()
+* max()
+* min()
+* count()
+
+Ex. sort(num.begin(),num.end())
+
+
+=============== 1. Function Objects ==========================
+
+Function Objects (Functors) are Objects that can behave like function and can used with 
+STL Algorithms.
+a functor (function object) is simply a class or struct 
+that overloads the operator(), allowing its instances to be used like functions
+
+Some pre-defined functors in <functional>,
+plus<T>
+minus<T>
+multiplies<T>
+divides<T>
+
+
+
+Why STL is useful?
+
+Instead of creating your own data structures and algorithms 
+from scratch, STL provides tested and reusable implementations.

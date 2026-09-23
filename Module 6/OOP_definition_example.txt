@@ -1,0 +1,204 @@
+------------------------ Object Oriented Programming ------------------------------------
+
+             OOP
+              │
+    ┌─────────┼─────────┐
+    ↓         ↓         ↓
+Encapsulation Inheritance Polymorphism
+              ↑
+         Abstraction
+
+
+ENCAPSULATION - Binding data & function into single unit.
+ABSTRACTION   - Hinding unnecessary details from outside.
+INHERITENCE   - Reuse / extend existing classes.
+POLYMORPHISM  - Same name with different behaviour.
+
+
+                                    ENCAPSULATION
+                            ------------------------------
+Wrapping data (variables) and methods (functions) into a single unit (class).
+Set controlled access to data.
+
+                            ---------------------------------------
+                            |   concepts inside Encapsulation     |
+                            ---------------------------------------
+                               ↓         ↓         ↓         ↓                             
+                            Class      Objects   Access  Specifiers
+                            _______________________________________         
+
+class BankAccount
+{
+private:
+    double balance;
+
+public:
+    void deposit(double amount)
+    {
+        if(amount > 0)
+            balance += amount;
+    }
+
+    void withdraw(double amount)
+    {
+        if(amount > 0 && amount <= balance)
+            balance -= amount;
+    }
+
+    double getBalance()
+    {
+        return balance;
+    }
+};
+
+BankAccount acc;
+acc.balance = 900;  Its wrong
+
+You can bind the data & functions such as 'balance' , 'deposit', 'withdraw' into a class BankAccount.
+We cannot directly access the balance from outside, instead of access through the public functions
+that is a controlled access.
+
+acc.deposit(900);
+acc.withdraw(800);
+
+We can access through methods..  We can intract through controlled operations
+
+
+                                        ABSTRACTION
+                                ------------------------------            
+Showing only essential features and hiding implementation details. (functions),
+Reduce complexity by focusing on what an object does, not how.
+
+                            ---------------------------------------
+                            |   concepts inside Abstraction       |
+                            ---------------------------------------
+                                    ↓               ↓                                     
+                            Abstract Class     Pure Virtual Function  
+                            _______________________________________
+
+class Car
+{
+public:
+
+    void start()
+    {
+        checkEngine();
+        injectFuel();
+        ignite();
+        cout << "Car started";
+    }
+
+private:
+
+    void checkEngine()
+    {
+        // complex internal logic
+    }
+
+    void injectFuel()
+    {
+        // complex internal logic
+    }
+
+    void ignite()
+    {
+        // complex internal logic
+    }
+};
+
+when we use,
+Car car;
+car.start();
+
+So we dont need to know,
+checkEngine();
+injectFuel();
+ignite();
+
+That details are hidden, That is abstraction.
+
+
+                                        INHERITENCE
+                                ------------------------------
+A mechanism where one class (child/derived) can reuse properties and methods of another
+Promote code reuse and hierarchy.
+
+                            -----------------------------------------------------
+                            |   concepts inside Inheritance     |
+                            ------------------------------------------------------
+                               ↓            ↓          ↓           ↓          ↓                             
+                            Single      Multilevel   Multiple  Heirarchical Hybrid
+                            _______________________________________________________
+
+class Employee
+{
+public:
+    string name;
+
+    void login()
+    {
+        cout << "Employee logged in";
+    }
+};
+
+class Developer : public Employee
+{
+public:
+    void writeCode()
+    {
+        cout << "Writing code";
+    }
+};
+
+Developer dev;
+
+dev.name = "Jibin";
+dev.login();
+dev.writeCode();
+
+--------- Developer gets the functionality of Employee----------
+Employee
+   │
+   │ inheritance
+   ↓
+Developer
+   │
+   ├── name
+   ├── login()
+   └── writeCode()
+
+
+                                        POLYMORPHISM
+                                ------------------------------
+The ability of a function or object to take many forms. (same name with diff arguments)
+same interface, different behavior.
+
+                            ---------------------------------------
+                            |   concepts inside Polymorphism     |
+                            ---------------------------------------
+                               ↓         ↓         ↓         ↓                             
+Function Overloading  Operator Overloading   Virtual Functions  Function Overriding  Dynamic Binding
+                                            ↓
+                                    Pure Virtual Functions
+
+
+class Printer {
+public:
+    
+    void print(int x) {
+        cout << "Printing int: " << x << endl;
+    }
+
+    
+    void print(double y) {
+        cout << "Printing double: " << y << endl;
+    }
+
+
+    void print(string s) {
+        cout << "Printing string: " << s << endl;
+    }
+};
+
+All functions have name print() and the compiler decides which function should call based on 
+argument type.
